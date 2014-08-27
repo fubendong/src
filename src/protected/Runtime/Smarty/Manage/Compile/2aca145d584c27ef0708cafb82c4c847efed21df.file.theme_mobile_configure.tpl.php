@@ -1,0 +1,375 @@
+<?php /* Smarty version Smarty-3.1-DEV, created on 2014-08-23 10:59:30
+         compiled from "/Users/fubendong/Sites/bzfshop/src/protected/Theme/Mobile/manage/Tpl/theme_mobile_configure.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:41924008253f80392318c34-21502635%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '2aca145d584c27ef0708cafb82c4c847efed21df' => 
+    array (
+      0 => '/Users/fubendong/Sites/bzfshop/src/protected/Theme/Mobile/manage/Tpl/theme_mobile_configure.tpl',
+      1 => 1408717013,
+      2 => 'file',
+    ),
+    '1554d6665be1716574e3de462dd08b9ddc9d1dd2' => 
+    array (
+      0 => '/Users/fubendong/Sites/bzfshop/src/protected/Theme/Manage/Tpl/plugin_layout.tpl',
+      1 => 1408717013,
+      2 => 'file',
+    ),
+    'db3694b0e1b08b39130f820414ca6dddb53af871' => 
+    array (
+      0 => '/Users/fubendong/Sites/bzfshop/src/protected/Theme/Manage/Tpl/layout.tpl',
+      1 => 1408717013,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '41924008253f80392318c34-21502635',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'DEBUG' => 0,
+    'authAdminUser' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1-DEV',
+  'unifunc' => 'content_53f803923ba9c4_46814930',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_53f803923ba9c4_46814930')) {function content_53f803923ba9c4_46814930($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Users/fubendong/Sites/bzfshop/src/protected/Framework/Smarty/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- 让 IE 使用最新模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>试客联盟管理后台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="试客联盟商城管理后台">
+    <meta name="author" content="试客联盟">
+
+    <!-- 指定360浏览器使用极速模式 -->
+    <meta name="renderer" content="webkit"/>
+    <!-- /指定360浏览器使用极速模式 -->
+
+    <!-- 引入 CSS 文件 -->
+    <?php echo $_smarty_tpl->getSubTemplate ("layout_block_link_css.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+    <!-- /引入 CSS 文件 -->
+
+    <!-- 这里是页面专用的 css 代码 -->
+    
+    <!-- 这里是页面专用的 css 代码 -->
+
+</head>
+
+<body>
+<!-- 用 JS 设置页面的导航菜单 -->
+<script type="text/javascript">
+    window.bz_set_nav_status = []; // 用于设置导航栏状态的数组，里面是很多设置 function()
+    window.bz_set_breadcrumb_status = []; // 用于设置 breadcrumb 的数组，里面是很多设置 {index:1, text:'商品编辑', link:'http://...'}
+</script>
+
+<?php if ($_smarty_tpl->tpl_vars['DEBUG']->value>0) {?>
+    <!-- 调试提醒 -->
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container" style="text-align:center;">
+                <h5>注意：现在是 DEBUG (<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['DEBUG']->value, ENT_QUOTES, 'UTF-8');?>
+) 模式</h5>
+            </div>
+        </div>
+    </div>
+    <!-- /调试提醒 -->
+<?php }?>
+
+<!-- 顶部导航菜单 -->
+<div id="system_top_navbar" class="navbar navbar-static-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" target="_blank" href="http://www.bzfshop.net">试客联盟</a>
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">[<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['authAdminUser']->value['user_name'], ENT_QUOTES, 'UTF-8');?>
+]
+                        <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/My/Profile'),$_smarty_tpl);?>
+">我的资料</a></li>
+                        <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/User/Logout'),$_smarty_tpl);?>
+">退出登陆</a></li>
+                    </ul>
+                </li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Goods/Index'),$_smarty_tpl);?>
+">商品管理</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Order/Index'),$_smarty_tpl);?>
+">订单管理</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Article/Index'),$_smarty_tpl);?>
+">文章管理</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Account/Index'),$_smarty_tpl);?>
+">账号管理</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Misc/Index'),$_smarty_tpl);?>
+">杂项管理</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Stat/Index'),$_smarty_tpl);?>
+">数据统计</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Plugin/Index'),$_smarty_tpl);?>
+">插件主题</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Community/Announce'),$_smarty_tpl);?>
+">开源社区</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /顶部导航菜单 -->
+
+<!-- main_body -->
+<div id="main_body" class="container" style="margin-top: 10px;">
+
+    <!-- breadcrumb 导航-->
+    <div id="main_body_breadcrumb" class="row">
+    </div>
+    <!-- /breadcrumb 导航-->
+
+    <!-- ====================================== 这里是页面的主体内容 ============================================ -->
+
+    
+
+    <!-- 用 JS 设置页面的导航菜单 -->
+    <script type="text/javascript">
+        window.bz_set_nav_status.push(function ($) {
+            $("#system_top_navbar li:has(a[href='<?php echo smarty_helper_function_make_url(array('controller'=>'/Plugin/Index'),$_smarty_tpl);?>
+'])").addClass("active");
+        });
+    </script>
+    <div class="row bz_basic_content_block bz_box_shadow" style="padding:10px 10px 10px 10px;">
+
+        <!-- 页面上方导航条 -->
+        <div class="row">
+            <ul id="plugin_tabbar" class="nav nav-tabs">
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Plugin/Plugin/ListPlugin'),$_smarty_tpl);?>
+">插件管理</a></li>
+                <li><a href="<?php echo smarty_helper_function_make_url(array('controller'=>'/Plugin/Theme/ListTheme'),$_smarty_tpl);?>
+">主题管理</a></li>
+            </ul>
+        </div>
+        <!-- /页面上方导航条 -->
+
+        <!-- 插件管理主体内容 -->
+        
+    <!-- 页面主体内容 -->
+    <div class="row">
+        <h4>Mobile 主题配置</h4>
+        <br/>
+        <!-- 更新管理员信息的表单  -->
+        <form class="form-horizontal form-horizontal-inline form-dirty-check" method="POST"
+              style="margin: 0px 0px 0px 0px;">
+
+            <div class="well">
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">网站名</span>
+                        <input class="span9" type="text" name="site_name" value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['site_name']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">SEO标题</span>
+                        <input class="span9" type="text" name="seo_title" value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['seo_title']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">SEO关键词</span>
+                        <input class="span9" type="text" name="seo_keywords" value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['seo_keywords']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">SEO描述</span>
+                        <textarea class="span9" type="text" name="seo_description"
+                                  data-validation-required="data-validation-required"><?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['seo_description']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+</textarea>
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">商户名</span>
+                        <input class="span2" type="text" name="merchant_name"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['merchant_name']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                        <span class="input-label">商户所在地</span>
+                        <input class="span2" type="text" name="merchant_address"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['merchant_address']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                        <span class="input-label">ICP备案号</span>
+                        <input class="span2" type="text" name="icp"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['icp']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">GA UA</span>
+                        <input class="span2" type="text" name="google_analytics_ua"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['google_analytics_ua']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"/>
+                        <span class="comments">Google Analytics 的 UA 值，在这里开启 GA 的手机统计</span>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="input-label">客服电话</span>
+                        <input class="span2" type="text" name="kefu_telephone"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['kefu_telephone']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                        <span class="input-label">客服QQ</span>
+                        <input class="span2" type="text" name="kefu_qq"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['kefu_qq']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group" style="margin-top: 10px;">
+                    <div class="controls">
+                        <span class="input-label">售后说明</span>
+                        <textarea class="span6 editor-html-simple" rows="5" cols="20"
+                                  name="goods_after_service"><?php echo $_smarty_tpl->tpl_vars['goods_after_service']->value;?>
+</textarea>
+                    </div>
+                </div>
+
+                <!-- 分割条 -->
+                <div class="row inline-divider">
+                    <div class="divider"></div>
+                    <label class="label label-info">页面缓存时间</label>
+                </div>
+                <!-- /分割条 -->
+
+                <div class="control-group">
+                    <div class="controls">
+                    <span class="input-label" rel="tooltip" data-placement="top"
+                          data-title="系统设计的一个 Cache 页面">Cache页</span>
+                        <input class="span2" type="text" name="smarty_cache_time_cache_page"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['smarty_cache_time_cache_page']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               pattern="[0-9]+" data-validation-pattern-message="必须是整数"
+                               data-validation-required="data-validation-required"/>
+                        <span class="input-label">首页</span>
+                        <input class="span2" type="text" name="smarty_cache_time_goods_index"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['smarty_cache_time_goods_index']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               pattern="[0-9]+" data-validation-pattern-message="必须是整数"
+                               data-validation-required="data-validation-required"/>
+                        <span class="input-label">商品搜索页面</span>
+                        <input class="span2" type="text" name="smarty_cache_time_goods_search"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['smarty_cache_time_goods_search']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               pattern="[0-9]+" data-validation-pattern-message="必须是整数"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                    <span class="input-label" rel="tooltip" data-placement="top"
+                          data-title="系统设计的一个 Cache 页面">商品详情页面</span>
+                        <input class="span2" type="text" name="smarty_cache_time_goods_view"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['smarty_cache_time_goods_view']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               pattern="[0-9]+" data-validation-pattern-message="必须是整数"
+                               data-validation-required="data-validation-required"/>
+                        <span class="input-label">商品购买页面</span>
+                        <input class="span2" type="text" name="smarty_cache_time_goods_buy"
+                               value="<?php echo htmlspecialchars((($tmp = @$_smarty_tpl->tpl_vars['smarty_cache_time_goods_buy']->value)===null||$tmp==='' ? '' : $tmp), ENT_QUOTES, 'UTF-8');?>
+"
+                               pattern="[0-9]+" data-validation-pattern-message="必须是整数"
+                               data-validation-required="data-validation-required"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <span class="comments">注意：缓存时间单位为秒，1800 代表 30分钟</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 提交按钮 -->
+            <div class="row" style="text-align: center;">
+                <button type="submit" class="btn btn-success">保存设置</button>
+            </div>
+            <!-- /提交按钮 -->
+
+        </form>
+        <!-- /更新管理员信息的表单  -->
+
+    </div>
+    <!-- /页面主体内容 -->
+
+
+        <!-- /插件管理主体内容 -->
+
+    </div>
+
+
+    <!-- ====================================== /这里是页面的主体内容 ============================================ -->
+
+</div>
+<!-- /main_body -->
+
+<!-- 让 main_body 和下面的 footer 中间隔离出一段距离 -->
+<div id="main_body_tail" class="container">
+    <!-- 调用 Cron 执行，用于驱动系统的 Cron 去执行一些周期性的任务 -->
+    <img style="width:1px;height:1px;" src="<?php echo smarty_helper_function_make_url(array('controller'=>'/Cron/Run','static'=>false),$_smarty_tpl);?>
+"/>
+</div>
+<!-- /让 main_body 和下面的 footer 中间隔离出一段距离 -->
+
+<!-- 引入 JS 文件 -->
+<?php echo $_smarty_tpl->getSubTemplate ("layout_block_link_js.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<!-- /引入 JS 文件 -->
+
+<!-- 这里是页面专用的 JS 代码 -->
+
+<!-- 这里是页面专用的 JS 代码 -->
+
+<?php if (0==$_smarty_tpl->tpl_vars['DEBUG']->value) {?>
+    <!-- 尾部 footer -->
+    <div class="navbar navbar-fixed-bottom">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="row" style="text-align:center;">
+                    <span>版权所有：bzfshop 2010-<?php echo htmlspecialchars(smarty_modifier_date_format(time(),"%Y"), ENT_QUOTES, 'UTF-8');?>
+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /尾部 footer -->
+<?php }?>
+
+</body>
+</html><?php }} ?>
